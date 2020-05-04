@@ -8,17 +8,20 @@ import javax.ws.rs.core.MediaType;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
-@Path("/hello")
+@Path("/hi")
 public class GreetingResource {
 
     @Inject
     GreetingService service;
 
+    @Inject
+    HostnameIpService ipservice;
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/greeting/{name}")
     public String greeting(@PathParam String name) {
-        return service.greeting(name);
+        return service.greeting(name) + ipservice.hostnameIP();
     }
 
     @GET
