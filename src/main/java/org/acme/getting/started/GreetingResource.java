@@ -20,7 +20,7 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String greeting(@PathParam String name) {
-        return service.greeting(name) + ": " + ipservice.hostnameIP();
+        return ipservice.hostnameIP();
     }
 
 }
