@@ -22,7 +22,7 @@ public class HostnameIpService {
  
             e.printStackTrace();
         }
-        return "hello: " + ip + " = " + hostname;
+        return "hello: " + ip ;
     }
 
 }
