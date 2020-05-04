@@ -77,3 +77,8 @@ native executable:
 After getting a cup of coffee, you'll be able to run this executable directly:
 
 > ./target/getting-started-1.0-SNAPSHOT-runner
+
+
+# Getting started with Quarkus on OpenShift
+
+> oc new-app quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/renatoppuccini/quarkus.git --name=quarkus-hello
